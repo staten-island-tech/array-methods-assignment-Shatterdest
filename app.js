@@ -1,3 +1,13 @@
+
+function listPeople(people) {
+  people.forEach(person => console.log(`Name: ${person.name}, Age: ${person.age}, Favorite Numbers: ${person.favoriteNumbers}`));
+}
+
+function listFavNum(people) {
+  const favNums =[];
+  people.forEach(person => person.favoriteNumbers.forEach(num => console.log(num)));
+}
+
 function init() {
   const people = [
     { name: "John Doe", age: 32, favoriteNumbers: [1, 2, 3, 4, 5] },
@@ -14,12 +24,9 @@ function init() {
       favoriteNumbers: [11111, 22222, 33333, 44444, 55555],
     },
   ];
+  console.log(`Here are the list of people:${JSON.stringify(people)}`)
+  listPeople(people);
   listFavNum(people);
-}
-
-function listFavNum(people) {
-    console.log(people)
-    
 }
 
 init();
