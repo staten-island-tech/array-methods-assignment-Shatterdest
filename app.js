@@ -1,9 +1,10 @@
-function list (people) {
+function list(people) {
   people.forEach((person) => {
     console.log(`This person's name is ${person.name}.`);
-  person.favoriteNumbers.forEach((number) => {
-    console.log(`A number this person likes is ${number}.`);
-  })});
+    person.favoriteNumbers.forEach((number) => {
+      console.log(`A number this person likes is ${number}.`);
+    });
+  });
 }
 
 function init() {
@@ -25,7 +26,5 @@ function init() {
   console.log(`Here are the list of people:${JSON.stringify(people)}`);
   list(people);
 }
-
-
 
 init();
